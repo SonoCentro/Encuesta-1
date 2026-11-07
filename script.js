@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // REEMPLAZAR ESTA URL CON LA QUE TE ENTREGA GOOGLE APPS SCRIPT
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwi7EJuiOe6-5cygAI01m_mrdQLRoAEH7isBl-JE3bJG5zb8jzCOiWo7507bKbJDptC/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxTp_GuOo54_oyOBrgG64CjtavHF_4aH7ZBMUXDo8OvTQxU-nZiCXdmJLh_ET13olE/exec';
 
     const stepConsent = document.getElementById('step-consent');
     const stepDemographics = document.getElementById('step-demographics');
