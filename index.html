@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percepción de fragmentos musicales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="container">
+        <!-- BLOQUE 1: Bienvenida y Consentimiento -->
+        <section id="step-consent" class="card">
+            <header class="header">
+                <span class="institution-tag">Universidad de San Buenaventura • Ingeniería de Sonido</span>
+                <h1>Percepción de fragmentos musicales</h1>
+            </header>
+
+            <div class="content-body">
+                <p class="intro-lead">¡Te invitamos a participar en una experiencia de escucha!</p>
+                
+                <p>Estamos realizando un estudio académico desde el programa de <strong>Ingeniería de Sonido de la Universidad de San Buenaventura</strong>. Queremos explorar cómo las personas perciben diferentes fragmentos musicales y si la información sobre su origen influye en la conexión emocional que generan.</p>
+
+                <p>Durante esta actividad escucharás <strong>10 fragmentos musicales de 20 segundos</strong>. Primero los escucharás sin conocer su autoría y, posteriormente, volverás a escucharlos con información sobre quién los creó.</p>
+
+                <div class="info-box">
+                    <h3>⏱️ ¿Cuánto tiempo necesitas?</h3>
+                    <p>Aproximadamente <strong>10 minutos</strong>.</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>🎧 Antes de comenzar:</h3>
+                    <ul>
+                        <li>Busca un lugar tranquilo donde puedas escuchar sin interrupciones.</li>
+                        <li>Utiliza audífonos para una mejor experiencia.</li>
+                        <li>Mantén un volumen cómodo y constante durante toda la actividad.</li>
+                        <li>Responde de acuerdo con tu percepción personal. No existen respuestas correctas o incorrectas.</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h3>🔒 Sobre tu participación:</h3>
+                    <ul>
+                        <li>Tu participación es voluntaria y anónima. No solicitaremos tu nombre ni correo electrónico. Puedes abandonar la actividad en cualquier momento, sin ninguna consecuencia.</li>
+                        <li>La información recopilada será utilizada exclusivamente con fines académicos y los resultados se analizarán de manera conjunta.</li>
+                        <li>Para participar debes ser mayor de 18 años.</li>
+                    </ul>
+                </div>
+
+                <p class="thank-you-note">¡Gracias por tu interés y por ayudarnos a explorar las diferentes formas de experimentar la música!</p>
+            </div>
+
+            <hr class="divider">
+
+            <form id="consentForm" class="consent-form">
+                <fieldset class="question-group">
+                    <legend>¿Aceptas participar voluntariamente en este estudio?</legend>
+                    
+                    <label class="radio-option">
+                        <input type="radio" name="consent" value="yes" required>
+                        <span>Sí, soy mayor de edad y acepto participar.</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio" name="consent" value="no">
+                        <span>No acepto participar.</span>
+                    </label>
+                </fieldset>
+
+                <button type="submit" class="btn-next">Continuar</button>
+            </form>
+        </section>
+
+        <!-- BLOQUE 2: Datos del participante -->
+        <section id="step-demographics" class="card hidden">
+            <header class="header">
+                <span class="institution-tag">Universidad de San Buenaventura • Ingeniería de Sonido</span>
+                <h2>Datos del participante</h2>
+            </header>
+
+            <p class="section-description">Esta información nos ayudará a conocer algunas características generales de las personas que participan en el estudio. No se solicitarán datos de identificación personal.</p>
+
+            <form id="demographicsForm" class="demographics-form">
+                <div class="form-group">
+                    <label for="edad">1. Rango de edad:</label>
+                    <select id="edad" name="edad" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="18-24">18 a 24 años</option>
+                        <option value="25-34">25 a 34 años</option>
+                        <option value="35-44">35 a 44 años</option>
+                        <option value="45-54">45 a 54 años</option>
+                        <option value="55+">55 años o más</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="genero">2. Identidad de género:</label>
+                    <select id="genero" name="genero" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="no-binario">No binario</option>
+                        <option value="otro">Otro / Prefiero no decir</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="formacion_musical">3. ¿Tienes formación o experiencia profesional en música o ingeniería de sonido?</label>
+                    <select id="formacion_musical" name="formacion_musical" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="ninguna">No, ninguna</option>
+                        <option value="aficionado">Aficionado / Autodidacta</option>
+                        <option value="estudiante">Estudiante de música o sonido</option>
+                        <option value="profesional">Profesional en música o sonido</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="escucha_ia">4. ¿Con qué frecuencia escuchas música generada con inteligencia artificial?</label>
+                    <select id="escucha_ia" name="escucha_ia" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="diario">Todos los días</option>
+                        <option value="frecuente">Varias veces a la semana</option>
+                        <option value="ocasional">Ocasionalmente</option>
+                        <option value="rara_vez">Casi nunca / Nunca</option>
+                        <option value="no_sabe">No lo sé con certeza</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-next">Continuar</button>
+            </form>
+        </section>
+
+        <!-- BLOQUE 3: Instrucciones de la prueba -->
+        <section id="step-instructions" class="card hidden">
+            <header class="header">
+                <span class="institution-tag">Universidad de San Buenaventura • Ingeniería de Sonido</span>
+                <h2>Instrucciones</h2>
+            </header>
+
+            <div class="content-body">
+                <p class="intro-lead">Antes de comenzar, ten en cuenta lo siguiente:</p>
+                <p>Escucharás <strong>10 fragmentos musicales de 20 segundos</strong> cada uno.</p>
+
+                <p>En el primer bloque escucharás los fragmentos sin conocer su origen. Después de cada escucha responderás cuatro preguntas relacionadas con tu percepción. Te preguntaremos:</p>
+
+                <ol class="instructions-list">
+                    <li>Si consideras que el fragmento fue creado por una persona o generado mediante inteligencia artificial.</li>
+                    <li>Qué tan agradable o desagradable te resulta.</li>
+                    <li>Qué tan calmado o excitante te resulta.</li>
+                    <li>Qué tan fuerte es tu conexión emocional con él.</li>
+                </ol>
+
+                <div class="info-box">
+                    <h3>💡 Algunas recomendaciones:</h3>
+                    <ul>
+                        <li>Escucha cada fragmento completo.</li>
+                        <li>Evita cambiar el volumen durante la actividad.</li>
+                        <li>Responde según tu primera impresión.</li>
+                        <li>No intentes identificar respuestas correctas: nos interesa conocer tu experiencia.</li>
+                    </ul>
+                </div>
+
+                <p>Al finalizar el primer bloque, pasarás a una segunda escucha de los mismos fragmentos. En esta ocasión conocerás información sobre su autoría y volverás a valorar tu conexión emocional.</p>
+                
+                <p class="start-prompt"><strong>¡Comencemos!</strong></p>
+            </div>
+
+            <button id="btn-start-listening" class="btn-next">Iniciar Escucha</button>
+        </section>
+
+        <!-- BLOQUE 4: Primer Bloque de Escucha -->
+        <section id="step-block-1" class="card hidden">
+            <header class="header">
+                <span id="fragment-counter-1" class="institution-tag">Fragmento 1 de 10</span>
+                <h2>Evaluación de Percepción (Bloque 1)</h2>
+            </header>
+
+            <p class="section-description">Escucha el fragmento completo y responde las siguientes preguntas de acuerdo con tu percepción.</p>
+
+            <div class="audio-player-container">
+                <audio id="audioPlayer1" controls>
+                    <source id="audioSource1" src="" type="audio/wav">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+
+            <form id="evaluationForm1" class="evaluation-form">
+                <div class="eval-question-group">
+                    <label class="eval-label">1. ¿Cuál crees que es el origen de este fragmento?</label>
+                    <label class="radio-option">
+                        <input type="radio" name="origen" value="humano" required>
+                        <span>Música creada por humanos.</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="origen" value="ia" required>
+                        <span>Música generada por inteligencia artificial.</span>
+                    </label>
+                </div>
+
+                <div class="eval-question-group">
+                    <label class="eval-label">2. ¿Qué tan agradable o desagradable te resulta este fragmento?</label>
+                    <span class="scale-hints">1 = Muy desagradable | 7 = Muy agradable</span>
+                    <div class="likert-scale">
+                        <label><input type="radio" name="agradable" value="1" required><span>1</span></label>
+                        <label><input type="radio" name="agradable" value="2"><span>2</span></label>
+                        <label><input type="radio" name="agradable" value="3"><span>3</span></label>
+                        <label><input type="radio" name="agradable" value="4"><span>4</span></label>
+                        <label><input type="radio" name="agradable" value="5"><span>5</span></label>
+                        <label><input type="radio" name="agradable" value="6"><span>6</span></label>
+                        <label><input type="radio" name="agradable" value="7"><span>7</span></label>
+                    </div>
+                </div>
+
+                <div class="eval-question-group">
+                    <label class="eval-label">3. ¿Qué tan calmado o excitante te resulta este fragmento?</label>
+                    <span class="scale-hints">1 = Muy calmado | 7 = Muy excitante</span>
+                    <div class="likert-scale">
+                        <label><input type="radio" name="calmado" value="1" required><span>1</span></label>
+                        <label><input type="radio" name="calmado" value="2"><span>2</span></label>
+                        <label><input type="radio" name="calmado" value="3"><span>3</span></label>
+                        <label><input type="radio" name="calmado" value="4"><span>4</span></label>
+                        <label><input type="radio" name="calmado" value="5"><span>5</span></label>
+                        <label><input type="radio" name="calmado" value="6"><span>6</span></label>
+                        <label><input type="radio" name="calmado" value="7"><span>7</span></label>
+                    </div>
+                </div>
+
+                <div class="eval-question-group">
+                    <label class="eval-label">4. ¿Qué tan fuerte es tu conexión emocional con este fragmento?</label>
+                    <span class="scale-hints">1 = Ninguna conexión | 7 = Conexión muy fuerte</span>
+                    <div class="likert-scale">
+                        <label><input type="radio" name="conexion" value="1" required><span>1</span></label>
+                        <label><input type="radio" name="conexion" value="2"><span>2</span></label>
+                        <label><input type="radio" name="conexion" value="3"><span>3</span></label>
+                        <label><input type="radio" name="conexion" value="4"><span>4</span></label>
+                        <label><input type="radio" name="conexion" value="5"><span>5</span></label>
+                        <label><input type="radio" name="conexion" value="6"><span>6</span></label>
+                        <label><input type="radio" name="conexion" value="7"><span>7</span></label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-next">Siguiente Fragmento</button>
+            </form>
+        </section>
+
+        <!-- BLOQUE 5: Transición al Bloque 2 -->
+        <section id="step-transition" class="card hidden">
+            <header class="header">
+                <span class="institution-tag">Universidad de San Buenaventura • Ingeniería de Sonido</span>
+                <h2>¡Primer bloque finalizado!</h2>
+            </header>
+            <div class="content-body">
+                <p class="intro-lead">¡Gracias por continuar!</p>
+                <p>Ahora volverás a escuchar los mismos 10 fragmentos musicales, en el mismo orden.</p>
+                <p>Esta vez conocerás información sobre quién creó cada fragmento: una persona o una inteligencia artificial.</p>
+                <p>Después de escuchar cada uno, te pediremos que valores nuevamente tu conexión emocional con él.</p>
+                <div class="info-box">
+                    <p>⚠️ <em>Recuerda que debes continuar sin regresar al bloque anterior.</em></p>
+                </div>
+                <p class="start-prompt"><strong>¡Vamos con la segunda parte!</strong></p>
+            </div>
+            <button id="btn-start-block2" class="btn-next">Iniciar Segundo Bloque</button>
+        </section>
+
+        <!-- BLOQUE 6: Segundo Bloque de Escucha -->
+        <section id="step-block-2" class="card hidden">
+            <header class="header">
+                <span id="fragment-counter-2" class="institution-tag">Fragmento 1 de 10</span>
+                <h2>Evaluación de Conexión (Bloque 2)</h2>
+            </header>
+
+            <div id="authorship-banner" class="authorship-banner"></div>
+
+            <div class="audio-player-container">
+                <audio id="audioPlayer2" controls>
+                    <source id="audioSource2" src="" type="audio/wav">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+
+            <form id="evaluationForm2" class="evaluation-form">
+                <div class="eval-question-group">
+                    <label id="conexion-label-2" class="eval-label">Sabiendo que este fragmento fue [creado por humanos / generado con inteligencia artificial], ¿qué tan fuerte es tu conexión emocional con él?</label>
+                    <span class="scale-hints">1 = Ninguna conexión | 7 = Conexión muy fuerte</span>
+                    <div class="likert-scale">
+                        <label><input type="radio" name="conexion2" value="1" required><span>1</span></label>
+                        <label><input type="radio" name="conexion2" value="2"><span>2</span></label>
+                        <label><input type="radio" name="conexion2" value="3"><span>3</span></label>
+                        <label><input type="radio" name="conexion2" value="4"><span>4</span></label>
+                        <label><input type="radio" name="conexion2" value="5"><span>5</span></label>
+                        <label><input type="radio" name="conexion2" value="6"><span>6</span></label>
+                        <label><input type="radio" name="conexion2" value="7"><span>7</span></label>
+                    </div>
+                </div>
+
+                <button type="submit" id="btn-submit-final" class="btn-next">Siguiente Fragmento</button>
+            </form>
+        </section>
+
+        <!-- BLOQUE 7: Pantalla Final -->
+        <section id="step-final" class="card hidden">
+            <header class="header">
+                <span class="institution-tag">Universidad de San Buenaventura • Ingeniería de Sonido</span>
+                <h2>¡Estudio finalizado con éxito!</h2>
+            </header>
+            <div class="content-body">
+                <p class="intro-lead">¡Muchísimas gracias por tu valiosa participación!</p>
+                <p>Tus respuestas han sido registradas correctamente y nos ayudarán a avanzar en la investigación sobre la percepción musical y la inteligencia artificial.</p>
+                <p>Puedes cerrar esta ventana de forma segura.</p>
+            </div>
+        </section>
+
+        <!-- PANTALLA DE SALIDA -->
+        <section id="step-exit" class="card hidden">
+            <h2>Gracias por tu tiempo</h2>
+            <p>Has decidido no participar en el estudio. Puedes cerrar esta ventana.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

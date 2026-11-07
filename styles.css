@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 680px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.institution-tag {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0056b3;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+h1, h2 {
+    font-size: 1.8rem;
+    color: #1a252f;
+    margin-bottom: 1rem;
+}
+
+.content-body p, .section-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #4a5568;
+}
+
+.intro-lead {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #0056b3;
+}
+
+.instructions-list {
+    margin: 1rem 0 1.5rem 1.5rem;
+    line-height: 1.6;
+    color: #2c3e50;
+}
+
+.instructions-list li {
+    margin-bottom: 0.5rem;
+}
+
+.start-prompt {
+    font-size: 1.2rem;
+    color: #0056b3;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.info-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #0056b3;
+    padding: 1rem 1.25rem;
+    border-radius: 4px;
+    margin: 1.25rem 0;
+}
+
+.info-box h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.info-box ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+}
+
+.info-box li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.4rem;
+}
+
+.thank-you-note {
+    font-style: italic;
+    color: #555555;
+    margin-top: 1rem;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 2rem 0;
+}
+
+.form-group, .eval-question-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label, .eval-label {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #1a252f;
+}
+
+.form-group select {
+    padding: 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+    outline: none;
+    transition: border-color 0.2s, background-color 0.2s;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    border-color: #0056b3;
+    background-color: #ffffff;
+}
+
+.consent-form legend {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #1a252f;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border: 1px solid #cbd5e1;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.radio-option:hover {
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 0.75rem;
+    width: 18px;
+    height: 18px;
+    accent-color: #0056b3;
+}
+
+.audio-player-container {
+    background-color: #f8f9fa;
+    border: 1px solid #cbd5e1;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+audio {
+    width: 100%;
+}
+
+.authorship-banner {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-left: 4px solid #1d4ed8;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1e40af;
+    text-align: center;
+}
+
+.scale-hints {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.likert-scale {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    border: 1px solid #cbd5e1;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    gap: 0.5rem;
+}
+
+.likert-scale label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    flex: 1;
+}
+
+.likert-scale input[type="radio"] {
+    margin-bottom: 0.25rem;
+    accent-color: #0056b3;
+    cursor: pointer;
+}
+
+.btn-next {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.9rem;
+    background-color: #0056b3;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-next:hover {
+    background-color: #003d80;
+}
